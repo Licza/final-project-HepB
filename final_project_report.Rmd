@@ -1,0 +1,40 @@
+---
+title: "Final Project"
+author: Licza Lobo
+date: " `r format(Sys.Date(), '%b %e %Y')`"
+output: html_document
+---
+
+# Introduction
+This project will use publicly available National Health and Nutrition Examination Survey (NHANES) August 2021–August 2023 data to examine socioeconomic and racial disparities in Hepatitis B serologic immunity among U.S. adults aged 20 years and older. The data contains laboratory results for Hepatitis B surface antibody used to assess vaccine-derived immunity, along with respondent-level demographic and socioeconomic variables (age, sex, race/ethnicity, family income to poverty ratio, and education level). 
+
+## Analysis Objectives
+The final R Markdown report will include a Table 1 summarizing participant characteristics by Hepatitis B immunity. A figure will be presented to illustrate differences in immunity across education levels. In addition, a multivariable logistic regression model will be fitted to estimate adjusted associations between demographic and socioeconomic factors and Hepatitis B immunity, with results presented in a regression table.
+```{r, setup, echo=FALSE, message=FALSE}
+here::i_am("final_project_report.Rmd") 
+clean_df <-  readRDS(here::here("Data/HepB_Data_Clean_Final.rds"))
+```
+
+
+## Tabular Analysis
+Characteristics of the `r nrow(clean_df)` U.S. adults aged 20 years or older with available Hepatitis B immunity data from the 2021–2023 NHANES survey cycle are presented in Table 1, stratified by Hepatitis B immunity status.
+```{r, table1, echo=FALSE, message=FALSE}
+readRDS(here::here("Output/Table1.rds"))
+```
+
+
+
+## Regression Analysis
+Below are the results of a multivariable logistic regression model used to evaluate demographic and socioeconomic factors associated with Hepatitis B immunity. Results are reported as odds ratios (ORs) with 95% confidence intervals and global p-values.
+```{r, Logistic-Regression-Model, echo=FALSE, message=FALSE, warning=FALSE}
+readRDS(here::here("Output/regression.rds"))
+
+```
+
+## Figure 1: Immunity by Education Level
+This figure visualizes the proportion of individuals with vaccine-Induced Hepatitis B Immunity across education levels.
+```{r, figure1, echo=FALSE, message=FALSE, fig.width= 8}
+readRDS(here::here("Output/figure1.rds"))
+```
+
+
