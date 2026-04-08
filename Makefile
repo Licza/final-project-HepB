@@ -12,6 +12,10 @@ Output/Regression.rds: Data/HepB_Data_Clean_Final.rds
 
 Output/Figure1.rds: Data/HepB_Data_Clean_Final.rds
 	Rscript Code/04_figure1.R
+
+.PHONY: install
+install: 
+	Rscript -e "renv::restore(prompt = FALSE)"
 	
 .PHONY: clean
 clean:

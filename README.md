@@ -48,4 +48,5 @@ The project evaluates demographic and socioeconomic factors associated with immu
   - Contains rules to create each object needed for the final report
 
 ## How to Generate the Final Report
-  - Use `make report.html` or run all R scripts in order from 01 to 05  
+  - First synchronize project library by running `make install`
+  - Second use `make report.html` or run all R scripts in order from 01 to 05  to create final report
