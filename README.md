@@ -52,8 +52,11 @@ The project evaluates demographic and socioeconomic factors associated with immu
   - To build locally run: docker build -t final_image .
   - To run Docker container locally at the command line:
       - docker run  -v "$$(pwd)"/report:/home/rstudio/project/report final_image, for Mac Users
-      - docker run  -v "/$$(pwd)"/report:/home/rstudio/project/report final_image, for Windowns Users
+      - docker run  -v "/$$(pwd)"/report:/home/rstudio/project/report final_image, for Windows Users
       
+`report/ `
+  - Holds FINAL compiled report
+  
 ## How to Generate the Final Report
   - If you are a Mac user please run the following make command: make final_project_report.html
   - If you are a Windows user please run the following make command: make windows_final_project_report.html
