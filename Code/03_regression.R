@@ -1,6 +1,10 @@
 library(dplyr)
 library(labelled)
 library(gtsummary)
+library(broom)
+library(broom.helpers)
+library(car)
+library(parameters)
 
 clean_df <-  readRDS(here::here("Data/HepB_Data_Clean_Final.rds"))
                      

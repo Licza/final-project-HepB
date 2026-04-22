@@ -47,6 +47,13 @@ The project evaluates demographic and socioeconomic factors associated with immu
 `Makefile/ `
   - Contains rules to create each object needed for the final report
 
+`Dockerfile`
+  - Contains local Docker Image
+  - To build locally run: docker build -t final_image .
+  - To run Docker container locally at the command line:
+      - docker run  -v "$$(pwd)"/report:/home/rstudio/project/report final_image, for Mac Users
+      - docker run  -v "/$$(pwd)"/report:/home/rstudio/project/report final_image, for Windowns Users
+      
 ## How to Generate the Final Report
-  - First synchronize project library by running `make install`
-  - Second use `make report.html` or run all R scripts in order from 01 to 05  to create final report
+  - If you are a Mac user please run the following make command: make final_project_report.html
+  - If you are a Windows user please run the following make command: make windows_final_project_report.html

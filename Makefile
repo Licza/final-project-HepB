@@ -20,3 +20,12 @@ install:
 .PHONY: clean
 clean:
 	rm -f Output/*.rds && rm -f Data/*.rds && rm -f final_project_report.html
+	
+#Docker rules
+final_project_report.html:
+	docker run  -v "$$(pwd)"/report:/home/rstudio/project/report licza/final_image
+	
+#For Windows
+windows_final_project_report.html:
+	docker run  -v "/$$(pwd)"/report:/home/rstudio/project/report licza/final_image
+	

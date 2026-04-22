@@ -27,14 +27,14 @@ readRDS(here::here("Output/Table1.rds"))
 ## Regression Analysis
 Below are the results of a multivariable logistic regression model used to evaluate demographic and socioeconomic factors associated with Hepatitis B immunity. Results are reported as odds ratios (ORs) with 95% confidence intervals and global p-values.
 ```{r, Logistic-Regression-Model, echo=FALSE, message=FALSE, warning=FALSE}
-readRDS(here::here("Output/regression.rds"))
+readRDS(here::here("Output/Regression.rds"))
 
 ```
 
 ## Figure 1: Immunity by Education Level
 This figure visualizes the proportion of individuals with vaccine-Induced Hepatitis B Immunity across education levels.
 ```{r, figure1, echo=FALSE, message=FALSE, fig.width= 8}
-readRDS(here::here("Output/figure1.rds"))
+readRDS(here::here("Output/Figure1.rds"))
 ```
 
 

@@ -1,6 +1,7 @@
 library(labelled)
 library(gtsummary)
 library(dplyr)
+library(broom)
 
 clean_df <-  readRDS(here::here("Data/HepB_Data_Clean_Final.rds"))
                      
